@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="/static/authDecor.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center">Авторизируйтесь для входа на Robotics today</h1>
+          </div>
+
+ <div class="card-body">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div class="alert alert-danger">
+                  <ul>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+            {% endwith %}
+            <form method="post">
+              <div class="mb-1">
+                <label for="username" class="form-label">Логин:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="mb-2">
+                <label for="password" class="form-label">Пароль:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn-primary">Войти</button>
+    <button type="submit" class="btn-prime" onclick="redirectToRegistration()">Регистрация</button>
+              </div>
+                   <input class="b2" type="button" value="Очистить" onclick="Clear()">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+      function redirectToRegistration() {
+        window.location.href = '/register';
+      }
+  function Clear() {
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+  }
+</script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+h1 {
+    color: #4B0082;
+}
+body {
+    padding: 200px;
+    text-align: center;
+    background: #7B68EE;
+    color: white;
+    }
+.mb-3 {
+    margin-bottom: 20px;
+}
+.btn-primary:hover {
+    background-color: gray;
+    color: white;
+}
+.b2:hover {
+    background-color: gray;
+    color: white;
+
+}
+.b2{
+margin-right: 168px;
+margin-top: 20px;
+}
+.auth:hover {
+    background-color: gray;
+    color: white;
+}

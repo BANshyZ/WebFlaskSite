@@ -1,0 +1,35 @@
+h1 {
+    color: #4B0082;
+}
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #7B68EE;
+    color: white;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: #98FB98;
+    text-align: center;
+    padding: 12px 18px;
+    text-decoration: none;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #191970;
+}
+
+    .navbar a:hover {
+        background-color: #98FB98;
+        color: #191970;
+    }
+
+    .navbar a.auth {
+        float: right;
+        vertical-align: top;
+    }
+.inf {
+font-size: 20px;
+}

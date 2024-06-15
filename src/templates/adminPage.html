@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Админ</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/adminPageDecor.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Добро пожаловать на вашу страницу</h1>
+        <h1>Господин ХИХИХИХИ</h1>
+        <p>Спасибо, что зарикролились!</p>
+        <img src="{{ url_for('static', filename='images/лиса.jpg')}}" />
+    </div>
+    <div class="navbar">
+        <a href="/Main">ГЛАВНАЯ</a>
+        <a href="/Main/firstArticle">Робототехника в мире</a>
+        <a href="/Main/secondArticle">"Робокошки" выполнили 30 тысяч задач в стационарах</a>
+        <a class="auth" href="/authorisation">ВЫХОД</a>
+    </div>
+</body>
+
+</html>

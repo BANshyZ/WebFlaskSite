@@ -1,0 +1,44 @@
+h1 {
+    color: #4B0082;
+}
+body {
+    padding: 200px;
+    text-align: center;
+    color: white;
+    background: #7B68EE;
+    }
+
+.mb-1 {
+    margin-bottom: 20px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+.btn-primary {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.btn-prime {
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+.btn-prime:hover {
+    background-color: gray;
+    color: white;
+
+}
+
+.btn-primary:hover {
+    background-color: gray;
+    color: white;
+
+}
+.b2:hover {
+    background-color: gray;
+    color: white;
+}
+.b2{
+margin-right: 92px;
+}

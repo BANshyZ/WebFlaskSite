@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/static/regDecor.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center">Регистрация на сайт Robotics Today</h1>
+          </div>
+          <div class="card-body">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div class="alert alert-danger">
+                  <ul>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+            {% endwith %}
+            <form method="post">
+              <div class="mb-3">
+                <label for="username" class="form-label">Логин:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Пароль:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn-primary">Зарегистрироваться</button>
+                <button type="submit" class="auth" onclick="redirectToAuthorisation()">Авторизация</button>
+              </div>
+              <input class="b2" type="button" value="Очистить" onclick="Clear()">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+      function redirectToAuthorisation() {
+        window.location.href = '/authorisation';
+      }
+      function Clear() {
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("email").value = "";
+  }
+  </script>
+</body>

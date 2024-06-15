@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Страница {{ user.username }}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/userPageDecor.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Добро пожаловать на вашу страницу</h1>
+        <h1>Мистер {{ user.username }}!</h1>
+        <img src="{{ url_for('static', filename='images/госслинг.png')}}" />
+        <p>Спасибо, что пользуетесь нашим сайтом!</p>
+    </div>
+    <div class="navbar">
+        <a href="/Main">О САЙТЕ</a>
+        <a href="/Main/firstArticle">Робототехника в мире</a>
+        <a href="/Main/secondArticle">"Робокошки" выполнили 30 тысяч задач в стационарах</a>
+        <a href="{{ url_for('logout') }}" class="auth">Выход</a>
+    </div>
+    <div class="inf">
+            <p>Ваши данные:</p>
+            <p>Email: {{ user.email }}</p>
+    </div>
+</body>
+
+</html>

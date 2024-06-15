@@ -13,22 +13,17 @@ login_manager.init_app(app)
 login_manager.login_view = 'login'
 
 
-@app.route('/Main')
-def index():
-    return render_template('Main.html')
-
-
-@app.route('/Main')
+@app.route('/')
 def Main():
     return render_template('Main.html')
 
 
-@app.route('/Main/firstArticle')
+@app.route('/firstArticle')
 def firstArticle():
     return render_template('firstArticle.html')
 
 
-@app.route('/Main/secondArticle')
+@app.route('/secondArticle')
 def secondArticle():
     return render_template('secondArticle.html')
 
@@ -97,4 +92,4 @@ def logout():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(host="0.0.0.0", port=10000)
+        app.run(host="0.0.0.0", port=10000)
